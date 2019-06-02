@@ -72,11 +72,11 @@ class War:
         return viking.receive_damage(saxon.strength)
 
     def showStatus(self):
-        if self.saxon_army.size() == 0:
+        if len(self.saxon_army()) == 0:
             return "Vikings have won the war of the century!"
-        if self.viking_army.size() == 0:
+        if len(self.viking_army()) == 0:
             return "Saxons have fought for their lives and survive another day..."
-        if self.saxon_army.size() == 1 and self.viking_army.size() == 1:
+        if len(self.saxon_army()) >= 1 and len(self.viking_army()) >= 1:
             return "Vikings and Saxons are still in the thick of battle."
 
 
